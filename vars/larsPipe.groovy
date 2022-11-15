@@ -43,7 +43,7 @@ def call(body) {
      }
      post {
          always {
-             echo confTest
+             echo config.confTest
              sh 'printenv'
              emailext body: '', recipientProviders: [developers()], subject: 'Build executed ', to: 'llampe86@gmail.com'
          }
