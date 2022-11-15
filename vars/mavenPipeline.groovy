@@ -44,7 +44,7 @@ def call(body) {
      post {
          always {
              sh 'printenv'
-             emailext body: '', recipientProviders: [developers()], subject: 'Build executed ', to: 'thomas@mosig-frey.de'
+             emailext body: '', recipientProviders: [developers()], subject: 'Build executed ', to: 'llampe86@gmail.com'
          }
          success {
               cleanWs()
